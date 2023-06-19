@@ -13,6 +13,6 @@
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="day0616.MyAge_12"/>
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="SistJavaProject"/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="초성현 1997"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="이영주 44 55 78"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="SistJavaProject"/>
 </launchConfiguration>
