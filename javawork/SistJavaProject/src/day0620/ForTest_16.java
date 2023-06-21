@@ -39,6 +39,8 @@ public class ForTest_16 {
 		{
 			System.out.println("I Love Java_"+i);
 		}
+		
+		
 	}
 
 }
