@@ -39,6 +39,16 @@ public class ScannerFor_11 {
 		}
 	}
 	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       // numSum();
+		//factorialTest();
+		quizFact();
+	}
+
+	
 	public static void quizFact()
 	{
 		//팩토리얼을 구할 숫자를 입력
@@ -54,12 +64,4 @@ public class ScannerFor_11 {
 		System.out.println(su+"!="+result);
 		
 	}
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-       // numSum();
-		//factorialTest();
-		quizFact();
-	}
-
 }
