@@ -10,6 +10,7 @@ public class ArrayIntFind_12 {
 		//0입력시 종료: while(true)
 
 		Scanner sc=new Scanner(System.in);
+		
 		int su; //입력할수
 		int [] data= {5,12,46,99,88,77,32,65,54,110,85,11};
 		boolean flag;

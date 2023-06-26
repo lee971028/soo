@@ -1,0 +1,27 @@
+package day0626;
+
+public class rr {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String []name= {"강호동","유재석","이영자"};
+		int [][]score= {{67,89,70},{100,90,89},{80,67,77}};
+		
+		
+		
+		//출력
+		System.out.println("이름\t국어\t영어\t수학");
+		for(int i=0;i<name.length;i++)
+		{
+			System.out.print(name[i]+"\t ");
+			//점수와 총점은 열갯수만큼 반복해서 출력
+			for(int j=0;j<score[i].length;j++)
+			{
+				System.out.print(score[i][j]+"\t");
+			}
+			System.out.println();
+		}
+
+	}
+
+}
