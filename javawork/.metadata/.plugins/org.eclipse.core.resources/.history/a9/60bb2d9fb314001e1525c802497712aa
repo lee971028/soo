@@ -1,0 +1,13 @@
+package day0627;
+
+public class QuizMain_09 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("\t[쇼핑목록]");
+		
+		System.out.println("쇼핑장소:" +Quiz_09.SHOPNAME);
+	}
+
+}
