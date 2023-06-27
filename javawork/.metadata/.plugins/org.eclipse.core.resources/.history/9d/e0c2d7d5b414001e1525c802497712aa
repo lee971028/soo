@@ -18,7 +18,7 @@ public class QuizMain_09 {
 		
 		System.out.println("상품명: "+sang);
 		System.out.println("가격: "+pri+"원");
-		//////////////////////////////////////////////////////////
+		
 		System.out.println("==============================");
 		System.out.println("쇼핑장소:" +Quiz_09.SHOPNAME);
 		
@@ -28,7 +28,7 @@ public class QuizMain_09 {
 		
 		System.out.println("상품명: "+q2.getSangName());
 		System.out.println("가격: "+q2.getPrice());
-		////////////////////////////////////////////////////////
+		
 		System.out.println("==============================");
 		System.out.println("쇼핑장소:" +Quiz_09.SHOPNAME);
 		

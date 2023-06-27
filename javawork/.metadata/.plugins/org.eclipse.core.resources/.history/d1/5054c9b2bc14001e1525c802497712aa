@@ -1,0 +1,27 @@
+package day0627;
+
+public class QuizMain_10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("***상품입고***");
+		System.out.println("-----------------------------");
+		Quiz_10.SHOPNAME="롯데마트";
+		System.out.println("입고된 상점: "+Quiz_10.SHOPNAME);
+		System.out.println("-----------------------------");
+		
+		//1
+		Quiz_10 q1=new Quiz_10();
+		
+		System.out.println();
+		
+		
+		//2
+		
+		
+		
+		//3
+	}
+
+}
