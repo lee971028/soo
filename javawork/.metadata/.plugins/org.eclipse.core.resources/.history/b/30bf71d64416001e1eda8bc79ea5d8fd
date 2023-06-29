@@ -1,0 +1,50 @@
+package day0629;
+
+class Work{
+	
+	public void process()
+	{
+		System.out.println("작업중!!!!");
+	}
+}
+///////////////////////
+class Food extends Work{
+	
+	@Override
+	public void process() {
+		// TODO Auto-generated method stub
+		super.process();
+		System.out.println("***음식을 합니다***");
+	}
+}
+
+/////////////////////////
+class Study extends Work{
+	
+	@Override
+	public void process() {
+		// TODO Auto-generated method stub
+		super.process();
+		System.out.println("***공부를 합니다***");
+	}
+}
+class Clean extends Work{
+	
+	@Override
+	public void process() {
+		// TODO Auto-generated method stub
+		super.process();
+		System.out.println("***청소를 합니다***");
+	}
+}
+////////////////////////////////////
+
+
+public class Inheri_09 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

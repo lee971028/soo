@@ -1,0 +1,57 @@
+package day0628;
+
+class Score{
+	
+	private String stuName;
+	private int java;
+	private int oracle;
+	private int html;
+	
+	 static final String TITLE="중간고사 시험결과";
+
+	//자동 stter,getter
+	public String getStuName() {
+		return stuName;
+	}
+
+	public void setStuName(String stuName) {
+		this.stuName = stuName;
+	}
+
+	public int getJava() {
+		return java;
+	}
+
+	public void setJava(int java) {
+		this.java = java;
+	}
+
+	public int getOracle() {
+		return oracle;
+	}
+
+	public void setOracle(int oracle) {
+		this.oracle = oracle;
+	}
+
+	public int getHtml() {
+		return html;
+	}
+
+	public void setHtml(int html) {
+		this.html = html;
+	}
+	 
+	 
+	 
+}
+
+/////////////////////////////////////
+public class ExObject_07 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

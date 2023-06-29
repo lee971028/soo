@@ -1,0 +1,31 @@
+package day0629;
+
+import java.util.Scanner;
+
+public class SungjukMain {
+
+	public static void getSungjuk(Sungjuk s)
+	{
+		System.out.println(s.getName()+"\t"+s.getJava()+"\t"+s.getOracle()+"\t"
+				+s.getTot()+"\t"+s.getAverage()+"\t"+s.getPyungga());
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc=new Scanner(System.in);
+		int inwon;
+		Sungjuk [] sj;
+		String schoolName;
+		
+		System.out.println("입력할 인원수"); //배열할당
+		inwon=Integer.parseInt(sc.nextLine());
+		
+		System.out.println("학교명?");
+		schoolName=sc.nextLine();
+		
+		Sungjuk.set
+		
+	}
+
+}

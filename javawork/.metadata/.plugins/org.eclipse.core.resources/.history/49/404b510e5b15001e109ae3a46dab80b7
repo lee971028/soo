@@ -1,0 +1,32 @@
+package day0628;
+
+class Member{
+	
+	private String stuName;//학생명
+	private String gender; //성별
+	private String addr;//주소
+	
+	static String ban;
+	static int cnt=0;
+	
+	
+	//수정용 메서드
+	public void setMembers(String name,String gd,String addr)
+	{
+		this.stuName=name;
+		this.gender=gd;
+		this.addr=addr;
+	}
+	
+	//출력용 메서드
+	
+}
+//////////////////////////////////////
+public class ExObject_06 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

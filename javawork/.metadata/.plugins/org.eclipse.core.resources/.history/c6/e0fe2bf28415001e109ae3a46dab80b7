@@ -1,0 +1,42 @@
+package day0628;
+/* 
+이름   급여    가족수    시간수    : 입력
+
+이름    급여    가족수   초과시간    가족수당   시간수당   총급여   : 최종출력
+ */
+public class Sawon {
+
+	private String sawonName;
+	private int pay;
+	private int famSu;
+	private int timeSu;
+	
+	
+	public String getSawonName() {
+		return sawonName;
+	}
+	public void setSawonName(String sawonName) {
+		this.sawonName = sawonName;
+	}
+	public int getPay() {
+		return pay;
+	}
+	public void setPay(int pay) {
+		this.pay = pay;
+	}
+	public int getFamSu() {
+		return famSu;
+	}
+	public void setFamSu(int famSu) {
+		this.famSu = famSu;
+	}
+	public int getTimeSu() {
+		return timeSu;
+	}
+	public void setTimeSu(int timeSu) {
+		this.timeSu = timeSu;
+	}
+	
+	
+	
+}

@@ -1,0 +1,10 @@
+package day0629;
+
+//class 가 class  : extends
+//class가 interface : implements
+//inter 가 inter  : extends
+
+public class Food implements FoodShop{
+
+	
+}

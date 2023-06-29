@@ -1,0 +1,8 @@
+package day0629;
+
+public class SubObj_03 {
+
+	String addr;
+	
+	
+}

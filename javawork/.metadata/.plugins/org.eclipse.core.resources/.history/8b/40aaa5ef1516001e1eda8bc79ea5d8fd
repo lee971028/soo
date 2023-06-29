@@ -1,0 +1,37 @@
+package day0629;
+
+class MyTv{
+	
+	private String che;//채널
+	private String vol; //볼륨
+	
+	public String getChe() {
+		return che;
+	}
+	public void setChe(String che) {
+		this.che = che;
+	}
+	public String getVol() {
+		return vol;
+	}
+	public void setVol(String vol) {
+		this.vol = vol;
+	}
+	
+	
+}
+/////////////////////////////////////
+public class ReviewObject_01 {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		MyTv tv=new MyTv();
+		
+		tv.setChe("ebs");
+		String c=tv.getChe();
+		
+		System.out.println(c+"채널을 시청합니다");
+	}
+
+}
