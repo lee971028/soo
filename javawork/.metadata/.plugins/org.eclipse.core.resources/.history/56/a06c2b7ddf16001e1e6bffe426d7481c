@@ -1,0 +1,39 @@
+package day0930;
+
+
+class Market{
+	
+	private String sangpum;
+	private int su;
+	
+	public Market() {
+
+		sangpum="딸기";
+		su=5;
+		
+	}
+	
+	
+	public Market(String sangpum,int su) {
+		this.sangpum=sangpum;
+		this.su=su;
+	}
+	
+	public void getMarket() {
+		System.out.println("상품명: "+sangpum);
+		System.out.println("수량: "+su);
+	}
+}
+
+//////////////////////////////
+class MyMarket{
+	
+}
+public class ReviewInheri_01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
