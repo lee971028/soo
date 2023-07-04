@@ -1,0 +1,25 @@
+package day0704;
+
+import java.awt.Color;
+import java.awt.Container;
+
+import javax.swing.JFrame;
+
+public class SwingArrPanel_08 extends JFrame{
+
+	Container cp;
+	
+	public SwingArrPanel_08(String title) {
+		super(title);
+		cp=this.getContentPane();
+		this.setBounds(200, 100, 300, 400);
+		cp.setBackground(new Color(255,255,200));
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		new SwingArrPanel_08("스윙 배열연습");
+	}
+
+}

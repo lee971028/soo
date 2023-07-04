@@ -1,0 +1,44 @@
+package day0704;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class SwingRandom_11 extends JFrame{
+
+	Container cp;
+	JLabel [] lblName=new JLabel[9]; //3행3열이므로
+	String [] str= {"이탈리아","체코","오스트리아","스웨덴","호주","프랑스","영국","일본","말레이시아"};
+	JButton btn;
+	
+	public SwingRandom_11(String title) {
+		super(title);
+		cp=this.getContentPane();
+		this.setBounds(200, 100, 500, 550);
+		cp.setBackground(new Color(255,255,200));
+		setDesign();
+		setVisible(true);
+	}
+	
+	public void setDesign()
+	{
+		//패널을 프레임의 센터에 추가
+		JPanel pCenter=new JPanel(new GridLayout(3, 3));
+		this.add(pCenter,BorderLayout.CENTER);
+		
+		//라벨을 패널에 추가
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		new SwingRandom_11("랜덤색상구하기");
+	}
+
+}
