@@ -1,0 +1,17 @@
+div.lottoball{
+
+    width: 100px;
+    height: 100px;
+    border: solid 3px #483d8b;
+    background-color: #6a5acd;
+    border-radius: 100px;
+    font-size: 2em;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 10px 10px 10px gray;
+    margin-left: 20px;
+    margin-top: 20px;
+    float: left;
+}

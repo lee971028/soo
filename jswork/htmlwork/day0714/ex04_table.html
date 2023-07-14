@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tb1,.tb2{
+            width: 400px;
+            border: 3px solid gray;
+            border-collapse: collapse;
+        }
+        .tb1 td,.tb1 th{
+            border: 1px solid gray;
+        }
+
+        .tb2 td,.tb2 th{
+            border: 1px solid gray;
+        }
+
+        .tb1 tr th{
+            background-color: aquamarine;
+        }
+
+        .tb1 tr td:hover{
+            background-color: blueviolet;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <table border="1" style="width: 300px;">
+        <caption><b>[표 1]</b></caption>
+        <tr height="50" bgcolor="orange">
+           <td align="center">하나</td>
+           <td align="right" valign="top">둘</td>
+           <td valign="bottom" bgcolor="gray">셋</td>
+        </tr>
+        <tr height="50" align="center">
+            <td colspan="3">3칸합침!!!</td>
+        </tr>
+    </table>
+
+
+    <hr>
+
+  <table class="tb1">
+      <caption><b>[표 2]</b></caption>
+      <tr>
+        <th>사진</th>
+        <th>이름</th>
+        <th>핸드폰</th>
+        <th>주소</th>
+      </tr>
+
+      <tr>
+        <td rowspan="4">
+            <img src="../flower_ani/f14.png">
+        </td>
+        <td>성신이</td>
+        <td>010-222</td>
+        <td>서울시</td>
+      </tr>
+
+      <tr>
+        <td>민규</td>
+        <td>010-333</td>
+        <td>서울시</td>
+      </tr>
+
+      <tr>
+        <td>성현이</td>
+        <td>010-555</td>
+        <td>서울시</td>
+      </tr>
+
+      <tr>
+        <td>병주</td>
+        <td>010-333</td>
+        <td>서울시</td>
+      </tr>
+  </table>
+
+  <hr>
+
+  <table class="tb2">
+    <caption><b>[표 문제_span]</b></caption>
+    <tr height="60">
+        <td rowspan="2" align="center">1</td>
+        <td colspan="2" align="center">2</td>
+        <td align="center">3</td>
+    </tr>
+    <tr height="60">
+        <td colspan="3" align="center">4</td>
+    </tr>
+    <tr height="60">
+        <td align="center">5</td>
+        <td align="center">6</td>
+        <td align="center">7</td>
+        <td align="center">8</td>
+    </tr>
+  </table>
+
+</body>
+</html>
