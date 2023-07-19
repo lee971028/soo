@@ -1,0 +1,70 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: #222;
+    height: 100%;
+
+}
+
+#container{
+    position: absolute;
+    margin-left: -450px;
+    width: 900px;
+    height: 100%;
+    background: #fff;
+    left: 50%;
+}
+
+aside{
+    float: left;
+    width: 300px;
+    padding: 20px 50px;
+    height: 100%;
+    background: lightgray
+
+}
+
+aside>div>img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    margin-bottom: 30px;
+}
+
+
+#main{
+    float: right;
+    padding: 40px;
+    width: 600px;
+    height: 100%;
+}
+
+aside h1{
+    font-size: 1.8em;
+}
+
+aside h2{
+    font-size: 1.2em;;
+}
+
+#namecard p{
+    font-size: 0.9em;
+    color: gray;
+}
+
+.subtitle{
+    line-height: 50px;
+}
+
+h3.subtitle{
+    color: darkgreen;
+    font-weight: bold;
+}
+
+#sns li>a{
+  text-decoration: none;
+}
+
