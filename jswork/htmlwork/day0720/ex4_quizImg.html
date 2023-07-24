@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container div img{
+            border: 10px inset gray;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+    </style>
+    <script>
+        window.onload=function(){
+
+            var b1=document.getElementById("btn1");
+            var b2=document.getElementById("btn2");
+            var b3=document.getElementById("btn3");
+            var b4=document.getElementById("btn4");
+            var b5=document.getElementById("btn5");
+
+            var im=document.getElementById("img1");
+
+            //1.버튼1이벤트
+                b1.onclick=function(){
+                    im.setAttribute("src","../연예인사진/13.jpg");
+                }
+            //2.버튼2이벤트
+            b2.onclick=function(){
+                    im.setAttribute("src","../연예인사진/20.jpg");
+                }
+            //3.버튼3이벤트
+            b3.onclick=function(){
+                    im.setAttribute("src","../연예인사진/17.jpg");
+                }
+            //4.버튼4이벤트
+                b4.onclick=function(){
+                    var w=parseInt(im.getAttribute("width"));
+                    w+=10;
+                    im.setAttribute("width",w);
+                }
+            //5.버튼5이벤트
+                b5.onclick=function(){
+                    var w=parseInt(im.getAttribute("width"));
+                    w-=10;
+                    im.setAttribute("width",w);
+                }
+
+            
+             //아래부분문제
+             var selimage=document.getElementById("selimage");
+             var photo=document.getElementById("photo");
+
+             //이코드 넣은이유: select이름과 사진을 동일하게 하기위해서
+               
+               var init_img=selimage.value;
+                //alert(init_img);
+               //현재사진의 src속성을 변경한다
+               photo.setAttribute("src",init_img);
+
+              //select 이벤트  _change
+              selimage.onchange=function(){
+
+                //모든 이벤트 함수에는 이벤트발생객체에 대한 this라는 
+                //변수가 기본적으로 존재한다
+                console.log(this.value);
+
+                //사진의 src에 this.value를 적용
+                photo.setAttribute("src",this.value);
+
+              }
+
+        }
+    </script>
+</head>
+<body>
+    <h3>이미지변경및 크기</h3>
+    <button type="button" id="btn1">박신혜</button>
+    <button type="button" id="btn2">유아인</button>
+    <button type="button" id="btn3">신민아</button><br><br>
+    <button type="button" id="btn4">점점크게</button>
+    <button type="button" id="btn5">점점작게</button>
+    <hr>
+    <img src="../Food/1.jpg" width="300" id="img1" border="1">
+
+    <hr>
+    <div class="container">
+        <div class="buttons">
+           <button type="button" id="btnsmall">점점작게</button>
+           <button type="button" id="btnlarge">점점크게</button>
+            <b style="margin-left: 20px;">사진선택</b>
+            <select id="selimage">
+                <option value="../연예인사진/11.jpg">고준희</option>
+                <option value="../연예인사진/12.jpg" selected>박보영</option>
+                <option value="../연예인사진/16.jpg">성준</option>
+                <option value="../연예인사진/19.jpg" >수지</option>
+            </select>
+        </div>
+
+        <div>
+            <img src="../연예인사진/15.jpg" id="photo" width="300">
+        </div>
+    </div>
+</body>
+</html>
