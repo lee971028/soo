@@ -42,7 +42,7 @@ onclick="location.href='insertForm.jsp'">데이타추가</button>
 		  <td><%=dto.getSdate() %></td>
 		  <td>
 			  <button type="button" class="btn btn-info btn-sm"
-			  onclick="location.href=''">수정</button>
+			  onclick="location.href='updateForm.jsp?num=<%=dto.getNum()%>'">수정</button>
 			  <button type="button" class="btn btn-danger btn-sm"
 			  onclick="location.href='delete.jsp?num=<%=dto.getNum()%>'">삭제</button>
 		  </td>
