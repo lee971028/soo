@@ -18,6 +18,8 @@
 	String realPath=getServletContext().getRealPath("/upload");
 	int uploadSize=1024*1024*3;
 	
+	System.out.println(realPath);
+	
 	MultipartRequest multi=null;
 	
 	multi=new MultipartRequest(request,realPath,uploadSize,"utf-8",
