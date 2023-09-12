@@ -1,0 +1,302 @@
+@charset "UTF-8";
+
+div.main-myprofile{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+}
+
+
+
+span.welcomename{
+   width: 200px;
+   height: 50px;
+   font-weight: 500;
+   text-align: left;
+   font-size: 25px;
+   line-height: 20px;
+   margin: 0;
+}
+
+div.toptoolbar{
+	  
+}
+.myprofile{
+   width: 76px;
+   height: 16px;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 20px;
+   margin: 0 16px 0 0;
+   cursor: pointer;
+   color: #737373;
+}
+
+
+.myclass{
+   width: 76px;
+   height: 16px;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 20px;
+   margin: 0;
+   color: #737373;
+   cursor: pointer;
+}
+
+
+.myreview{
+   width: 76px;
+   height: 16px;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 20px;
+   margin: 0 700px 0 16px;
+   color: #737373;
+   cursor: pointer;
+}
+
+
+.mypageActive{
+ 	color: #1a93ff !important;
+}
+
+.myprofile:hover, .myclass:hover, .myreview:hover{
+	color: #1a93ff;
+}
+
+.myprofile:active , .myclass:active , .myreview:active {
+	color: #1a93ff;
+}
+
+
+div.toptoolbar{
+   margin: 140px 0 0 0;
+   border-bottom: 1px solid #1a93ff;
+}
+
+div.personaldata{
+   border: 1px solid #f2f2f2;
+   border-radius: 5px;
+   width: 314px;
+   height: 390px;
+   margin:50px 0 200px 0;
+   padding: 50px 40px 50px 40px;
+   background-color: #fff;
+}
+
+span.myprofile-info{
+   font-weight: 500;
+    font-size: 16px;
+    color: #565656;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+input.writeinfo{
+   width: 300px;
+   height: 40px;
+   margin: 8px 0 28px 0;
+   border: 1px solid #e7e7e7;
+   border-radius: 5px;
+   background-color: #fff;
+   padding-left: 10px;
+   font-size: 16px;
+   font-weight: 500;
+}
+
+/* outline 에 1px solid 주면 안먹어용 border에 해야되용 */
+input:focus{
+  outline: none;
+  border: 1px solid #1a93ff;
+  color: #1a93ff;
+  
+}
+
+
+input::placeholder{
+   color: #c1c1c1;
+   font-family: NotoSansKR-Regular !important;
+}
+
+.dropbutton{
+    width: 314px;
+    height: 46px;
+    margin-top: 20px;
+    border: 1px solid #E6E6E5;
+    border-radius: 5px;
+    background-color: #e6e6e6;
+    font-size: 16px;
+    font-weight: 500;
+    color: #565656;
+    cursor: pointer;
+}
+
+
+/*[임현정] 마이페이지 > 나의 리뷰 시작*/
+
+div.myreviewlist{
+	width: 970px;
+    text-align: left;
+    padding-bottom: 200px;
+}
+
+div.myreviewlist table{
+	width: 100%;
+}
+
+div.myreviewlist table tbody {
+	
+}
+
+div.myreviewlist table tbody tr{
+	
+}
+
+div.myreviewlist table tbody tr th{
+	display: flex;
+    justify-content: space-between;
+	padding-top: 26px;
+    padding-bottom: 16px;
+    font-size: 14px;
+    font-weight: 500;
+}
+div.myreviewlist table tbody tr th > a.reviewDetail{
+	width: 750px;
+	line-height: 20px;	
+}
+
+div.myreviewlist table tbody tr th > a.reviewDetail:hover{
+	color:#1b93ff;
+	transition: 0.3s ease; 
+}
+
+div.myreviewlist table tbody tr th > a.reviewDetail:active{
+	color:#1b93ff;
+}
+
+
+div.myreviewlist table tbody tr th div.star-review > span{
+	color: #737373;
+	padding-right: 10px;
+}
+
+div.myreviewlist table tbody tr th div.star-review a{
+	
+}
+
+div.myreviewlist table tbody tr td{
+	display: flex;
+    justify-content: space-between;
+    padding-bottom: 26px;
+    border-bottom: 1px solid #737373;
+    font-size: 14px;
+    color: #929292;
+    font-weight: 500;
+}
+
+div.myreviewlist table tbody tr td span.time{
+	color: #737373;
+    font-size: 14px;
+}
+
+/*[임현정] 마이페이지 > 나의 리뷰 끝 */
+
+/* [조아라] myclass.css */
+div.main-myclass{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+  padding-bottom: 200px;
+}
+
+div.toolbar{
+   margin: 140px 0 30px 0;
+   border-bottom: 1px solid #1a93ff;
+}
+
+div.selectclass{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+    margin-bottom: 50px;
+    margin-top: 150px;
+}
+
+
+.selectclass-img {
+  width: 235px;
+  height: 140px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.selectclass-img:hover{
+	transform:scale(1.1);             /*  default */
+	-webkit-transform:scale(1.1);     /*  크롬 */
+	-moz-transform:scale(1.1);       /* FireFox */
+	-o-transform:scale(1.1);           /* Opera */
+}
+
+.selectclass-lesson>div.bottomclass{
+  margin-bottom: 30px;
+}
+.selectclass-lesson>div.bottomclass>p.lesson-name{
+     font-size: 15px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #363636;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 220px;
+}
+table.selectclass-lesson tr *{
+   margin: 4px;
+}
+table.selectclass-lesson tr{
+   margin-top: 50px;
+}
+
+div.selectclass-lesson>div.bottomclass>a.writereview{
+	color: #1a93ff;
+	font-weight: 650;
+	font-size: 14px;
+}
+
+div.selectclasslist{
+	margin-bottom: 60px;
+}
+
+/* [이다솔] 클래스들 간 간격설정 */
+
+table.selectclass-lesson td{
+   width: 235px;
+}
+
+
+
+
+
+

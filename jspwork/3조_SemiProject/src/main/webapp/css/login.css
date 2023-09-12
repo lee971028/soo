@@ -1,0 +1,137 @@
+@charset "UTF-8";
+/* [강나리] login css */
+*{
+	font-family: 'Noto Sans KR', sans-serif !important;
+	color:#363636;
+}
+
+.main_login {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+}
+.f_login {
+  width: 200px;
+  height: 35px;
+  margin: 150px 0px 20px 0px;
+  font-size: 26px;
+  font-weight: 500;
+  text-align: center;
+  color: #565656;
+}
+.box_main_white {
+  width: 314px;
+  height: 394px;
+  margin-top: 16px;
+  margin-bottom: 200px;
+  padding: 14px 36px 45px 36px;
+  border-radius: 5px;
+  border: solid 1px #f2f2f2;
+  background-color: #fff;
+  
+}
+input:focus {
+	border:1px solid #1b93ff;
+	color: #1b93ff;
+	}
+	
+.f_email, .f_password {
+    font-size: 16px;
+    font-weight: 500;
+    color: #565656;
+    display: inline-block;
+    margin-top: 30px;
+    padding-bottom: 10px;
+}
+.email_input, .password_input{
+    width: 300px;
+    height: 40px;
+    margin-top: 6px;
+    padding-left: 10px;
+    font-size: 16px;
+    border-width: 1px;
+    border-radius: 5px;
+    border: 1px solid #e2e2e2;
+    outline: none;
+  
+}
+.email_input::placeholder {
+	font-family: NotoSansKR-Regular !important;
+	font-size: 16px;
+	color: #c1c1c1;
+}
+
+.password_input::placeholder {
+	font-family: NotoSansKR-Regular !important;
+	font-size: 16px;
+	color: #c1c1c1;
+}
+
+.f_pw_search {
+     color: #8b8b8b;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 10px 0px 40px 0px;
+    text-decoration: underline;
+    font-family: NotoSansKR-Regular !important;
+    letter-spacing: -1.2px;
+}
+.bt_email_login {
+     width: 320px;
+    height: 45px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    /* box-shadow: 0px 3px 5px 0 rgb(255 75 78 / 23%); */
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    background-color: #1b93ff;
+}
+
+.bt_kakao_login {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  width: 320px;
+  height: 45px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border: 0px solid white;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  color: #312e2e;
+  background-color: #fde92d;
+}
+
+.bt_kakao_login > img{
+	padding-right: 10px;
+}
+
+
+.bt_gaip_login {
+    width: 322px;
+    height: 36px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border: 0px solid white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    color: #8b8b8b;
+    background-color: white;
+    outline: none;
+    font-family: NotoSansKR-Regular !important;
+    letter-spacing: -0.4px;
+}
+/* [강나리] login css 끝 */
