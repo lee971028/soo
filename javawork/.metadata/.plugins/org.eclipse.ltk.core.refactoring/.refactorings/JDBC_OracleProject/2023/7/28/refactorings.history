@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;DBConnect.java&apos; to &apos;QuizJDBC/src/Jdbc_sawon&apos;&#x0D;&#x0A;- Original project: &apos;JDBC_OracleProject&apos;&#x0D;&#x0A;- Destination element: &apos;QuizJDBC/src/Jdbc_sawon&apos;&#x0D;&#x0A;- Original element: &apos;dbtest.DBConnect.java&apos;" description="Copy compilation unit" destination="=QuizJDBC/src&lt;Jdbc_sawon" element1="/src&lt;dbtest{DBConnect.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1689124771016" units="1" version="1.0"/>
+</session>

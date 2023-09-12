@@ -1,0 +1,196 @@
+@charset "UTF-8";
+/* [강나리] detail css */
+*{
+	font-family: 'Noto Sans KR', sans-serif !important;
+	color:#363636;
+}
+
+.main_detail {
+    align-items: start;
+    display: flex;
+    justify-content: center;
+    align-content: start;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 200px;
+}
+.img_detail {
+	width: 550px;
+	height: 370px;
+	border-radius: 10px;
+	margin: 100px 400px 50px 0;
+}
+.btn_detail_content, .btn_detail_review{
+	width: 100px;
+    height: 30px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    color: #737373;
+    border: 0px solid white;
+    background-color: white;
+    outline: none;
+    letter-spacing: -0.4px;
+}
+hr {
+	border: 1px solid #f2f2f2;
+	width: 550px;
+	float: left;
+}
+#detail_c, #detail_r {
+	margin: 30px 0 50px 0;
+    font-size: 14px;
+}
+.detail_review table tr td.comment {
+	border-bottom: 1px solid #f2f2f2;
+	vertical-align: middle;
+}
+.detail_review table tr {
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+.detail_review table div {
+	/* margin-top: 20px; */
+}
+.detail_review table {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+/* [강나리] detail css 끝 */
+
+
+
+/* [신지환] detail css 시작 */
+
+/* 클래스 상세페이지_스크롤 */
+.decisionFrame {
+   display: flex;
+   flex-direction: column;
+   align-content: center;
+   justify-content: start;
+   align-items: stretch;
+   width: 350px;
+   height: 400px;
+   margin-top: 100px;
+   position: fixed;
+   margin: 100px 0 0 600px;
+}
+
+
+/* 카테고리 */
+div.decisionFrame p.category {
+   color: #808280;
+   line-height: 2em;
+   padding-left: 5px;
+}
+
+/* 별점 */
+div.star_rating {
+	margin-left: 5px;
+	width: 65px;
+}
+div.star_rating,.star_rating span.star_fill {
+	/* overflow: hidden; 요소 안에 컨텐츠가 넘칠때 감추겠다 */
+	display: inline-block;
+	overflow: hidden;
+	background: url(../image/starpoint.png) no-repeat;
+	height: 13px;
+}
+div.star_rating span.star_fill {
+	background-position: left bottom;
+	line-height: 0;
+	vertical-align: top;
+}
+/* 평점 숫자(소수점) 반환(4.0) */
+span.floatnum {
+   margin-left: 5px;
+   color: #737373;
+   font-size: 13px;
+}
+
+/* 클래스제목 */
+div.decisionFrame .title {
+   padding: 10px 10px 5px 5px;
+   line-height: 1.3;
+   font-size: 20px;
+}
+
+/* 강사명 */
+div.decisionFrame .tutor {
+	padding-left: 5px;
+}
+
+/* 가격 */
+div.decisionFrame .price {
+	float: right;
+   	padding: 15px 20px 0 0;
+   	font-size: 20px;
+}
+
+/* 버튼 간격 조절 */
+td.decisionBtn {
+   padding-top: 30px;
+}
+.btn_kakao_share {
+   display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+     width: 320px;
+     height: 45px;
+     cursor: pointer;
+     margin-bottom: 20px;
+     border: 0px solid white;
+     border-radius: 5px;
+     text-align: center;
+     font-size: 16px;
+     color: #312e2e;
+     background-color: #fde92d;
+     margin-left: 10px;
+}
+.btn_intoCart {
+   display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+     width: 320px;
+     height: 45px;
+     cursor: pointer;
+     margin-bottom: 10px;
+     border: 1px solid #1a93ff;
+     border-radius: 5px;
+     text-align: center;
+     font-size: 16px;
+     color: #1a93ff;
+     background-color: #f6fafe;
+     margin-left: 10px;
+}
+
+.btn_kakao_share > img {
+   padding-right: 10px;
+   float: left;
+}
+.btn_intoCart > img {
+   padding-right: 10px;
+   float: left;
+}
+
+/* [신지환] detail css 끝 */
+
+.detail_content{
+	font-size: 14px;
+    line-height: 20px;
+}
+
+.detailActive{
+	color: #323232;
+}
