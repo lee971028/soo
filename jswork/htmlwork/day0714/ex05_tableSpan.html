@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Gaegu:wght@300&family=Gasoek+One&family=Nanum+Pen+Script&family=Noto+Serif+KR:wght@200&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        .tb1{
+            width: 400px;
+            border: 5px inset gray;
+            border-collapse: collapse;
+        }
+        .tb1 td{
+            border: 1px solid gray;
+            font-family: 'Nanum Pen Script';
+            font-size: 20px;
+        }
+        .line{
+            border-bottom: 5px double red;
+        }
+    </style>
+</head>
+<body>
+    <table class="tb1">
+       <caption><b>[표 span 연습]</b></caption>
+       <tr>
+            <td rowspan="3" align="center">
+                <img src="../연예인사진/17.jpg" width="130"
+                    border="1" >
+            </td>
+            
+            <td>이름: 장순영</td>
+       </tr>
+       <tr>
+            <td>핸드폰: 010-222-4444</td>
+       </tr>
+       <tr class="line">
+           <td>주소: 서울시</td>
+       </tr>
+
+    <tr>
+        <td rowspan="3" align="center">
+            <img src="../연예인사진/1.jpg" width="130"
+                border="1">
+        </td>
+        
+        <td>이름: 김영환</td>
+   </tr>
+   <tr>
+        <td>핸드폰: 010-222-1111</td>
+   </tr>
+   <tr>
+       <td>주소: 서울시</td>
+   </tr>
+    </table>
+</body>
+</html>
