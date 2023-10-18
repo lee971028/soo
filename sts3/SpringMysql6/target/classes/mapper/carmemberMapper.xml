@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="carmember">
+ 	 <!-- 전체개수 -->
+ 	 <select id="getTotalCountOfCarMember" resultType="int">
+ 	    select count(*) from carmember
+ 	 </select>
+ 	 <!-- insert -->
+ 	 <insert id="insertOfCarMember" parameterType="cardto">
+ 	  insert into carmember values (null,#{name},#{hp},#{addr},now())
+ 	 </insert>
+ 	 <!-- all select -->
+ 	 <select id="selectAllOfMyCarMember" resultType="cardto">
+ 	    select * from carmember order by num asc
+ 	 </select>
+ </mapper>
