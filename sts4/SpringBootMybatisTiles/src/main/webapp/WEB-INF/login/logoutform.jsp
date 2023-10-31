@@ -13,12 +13,14 @@
 </head>
 <c:set var="root" value="<%=request.getContextPath() %>"/>
 <body>
-  <div>
-     <img alt="" src="${root }/image/K-060.png" width="200" align="left" hspace="20">
-     <br><br>
-     <b>님</b><br><br>
+  <div style="margin: 50px 100px;">
+  	<b>${name }님</b>&nbsp;&nbsp;&nbsp;&nbsp;
      <button type="button" class="btn btn-danger"
      style="width: 100px;" onclick="location.href='logoutprocess'">로그아웃</button>
+     <br><br>
+     <img alt="" src="${root }/image/K-060.png" width="500" align="left" hspace="20">
+    
+     
   </div>
 </body>
 </html>

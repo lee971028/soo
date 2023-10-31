@@ -12,22 +12,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<c:set var="root" value="<%=request.getContextPath() %>"/>
-<a href="/"><img src="${root }/image/title.png"
-style="width: 300px; ">
-</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-<c:if test="${sessionScope.loginok==null }">
-	<button type="button" class="btn btn-success"
-onclick="location.href='${root}/login/main'">Login</button>
-</c:if>
-
-<c:if test="${sessionScope.loginok!=null }">
-     <b>${sessionScope.myid }님이 로그인중....</b>
-	<button type="button" class="btn btn-danger"
-onclick="location.href='${root}/login/logoutprocess'">Logout</button>
-</c:if>
-
+<script type="text/javascript">
+   alert("로그인 실패!!!");
+   history.back();
+</script>
 </body>
 </html>

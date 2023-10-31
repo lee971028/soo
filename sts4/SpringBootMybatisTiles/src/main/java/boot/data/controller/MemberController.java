@@ -84,10 +84,9 @@ public class MemberController {
 	{
 		
 		String path=session.getServletContext().getRealPath("/membersave");
-		
 		SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMddHHmmss");
-		
 		String fileName=sdf.format(new Date())+myphoto.getOriginalFilename();
+		System.out.println(path);
 		
 		//dto저장
 		dto.setPhoto(fileName);
@@ -103,6 +102,66 @@ public class MemberController {
 		service.insertMember(dto);
 		
 		return "redirect:list";
+	}
+	
+	//삭제는 ajax
+	@GetMapping("/member/delete")
+	@ResponseBody
+	public void deleteMember(@RequestParam String num,HttpSession session)
+	{
+		String path=session.getServletContext().getRealPath("/membersave");
+	    String photo=service.getDataByNum(num).getPhoto();
+	    File file=new File(path+"\\"+photo);
+	    file.delete();
+		
+		service.deleteMember(num);
+	}
+	
+	//사진만 수정
+	@PostMapping("/member/updatephoto")
+	@ResponseBody
+	public void photoupload(String num,MultipartFile photo,HttpSession session)
+	{
+		//업로드할 경로
+		String path=session.getServletContext().getRealPath("/membersave");
+		
+		SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMddHHmmss");
+		String fileName=sdf.format(new Date())+photo.getOriginalFilename();
+		
+		//업로드
+		try {
+			photo.transferTo(new File(path+"/"+fileName));
+			
+			
+			service.updatePhoto(num, fileName); //db사진수정
+			//세션사진수정
+			session.setAttribute("loginphoto", fileName);
+		} catch (IllegalStateException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	//나의 정보에서 삭제
+	@GetMapping("/member/deleteme")
+	@ResponseBody
+	public void deleteinfo(String num,HttpSession session)
+	{
+		
+		
+		String path=session.getServletContext().getRealPath("/membersave");
+	    String photo=service.getDataByNum(num).getPhoto();
+	    File file=new File(path+"\\"+photo);
+	    file.delete();
+	     
+	     service.deleteMember(num);
+		
+		session.removeAttribute("loginok");
+		session.removeAttribute("myid");
+		session.removeAttribute("loginphoto");
+		session.removeAttribute("saveok");
+		
 	}
 	
 	

@@ -12,7 +12,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-  <div style="margin: 400px 700px;">
+  <div style="margin: 50px 100px;">
 		<form action="loginprocess" method="post" >
 			<table class="table table-bordered" style="width: 300px;">
 				<caption align="top"><b>회원 로그인</b></caption>
@@ -20,9 +20,9 @@
 					<th style="width: 120px;background-color: #ddd">아이디</th>
 					<td>
 						<input type="text" name="id" class="form-control"
-						required="required" autofocus="autofocus"
+						required="required" 
 						style="width: 150px;"
-						placeholder="아이디" >
+						placeholder="아이디" value="${sessionScope.saveok==null?"":sessionScope.myid }">
 					</td>
 				</tr>
 				<tr>
@@ -35,7 +35,7 @@
 				</tr>
 				<tr>
 					<td colspan="2" align="center">
-						<input type="checkbox" name="cbsave" >아이디저장
+						<input type="checkbox" name="cbsave" ${sessionScope.saveok==null?"":"checked"}>아이디저장
 												
 						<button type="submit" class="btn btn-info"
 						style="width: 120px;">회원로그인</button>

@@ -15,7 +15,15 @@
 <body>
 <c:set var="root" value="<%=request.getContextPath() %>"/>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img alt="" src="${root }/image/b8.png" style="width: 80px;  border-radius:30px;"><br>
+  
+  <!-- 로그인 안하면 기본사진,로그인 하면 자기사진으로 변경 -->
+  <c:if test="${sessionScope.loginok==null }">
+     <img alt="" src="${root }/image/b8.png" style="width: 80px;  border-radius:30px;"><br>
+  </c:if>
+  
+  <c:if test="${sessionScope.loginok!=null }">
+     <img alt="" src="${root }/membersave/${sessionScope.loginphoto}" style="width: 80px;  border-radius:30px;"><br>
+  </c:if>
   	<i class="bi bi-envelope-paper-heart"></i>&nbsp;bitcamp@gmail.com<br>
 	<i class="bi bi-person-square" style="font-size:26px"></i>&nbsp; 네이버 재직<br>
 	<i class="bi bi-telephone-inbound" style="font-size:26px"></i>&nbsp;02-2333-4545<br>
