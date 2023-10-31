@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Gamja+Flower&family=Nanum+Pen+Script&family=Noto+Serif+KR:wght@200&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <title>Insert title here</title>
 <script type="text/javascript">
@@ -74,6 +75,53 @@
 		  }
 	  });
 	  
+	  //수정버튼 클릭시 모달에 데이타 넣기
+	  $(".btnupdate").click(function(){
+			 updatenum=$(this).attr("num");
+			//alert(updatenum);
+			$.ajax({
+				type:"get",
+				dataType:"json",
+				url:"updateform",				
+				data:{"num":updatenum},
+				success:function(res){
+					console.dir(res);
+					$("#updatename").val(res.name);
+					$("#updatehp").val(res.hp);
+					$("#updateemail").val(res.email);
+					$("#updateaddr").val(res.addr);				
+				}
+			});
+		});
+		
+
+	  //수정
+	  $("#btnupdateok").click(function(){
+		  
+		  
+			//alert(updatenum);
+		  
+			var updatename=$("#updatename").val();
+			var updatehp=$("#updatehp").val();
+			var updateemail=$("#updateemail").val();
+			var updateaddr=$("#updateaddr").val();
+			
+			var data="num="+updatenum+"&name="+updatename+"&hp="+updatehp+"&email="+updateemail+"&addr="+updateaddr;
+			console.log(data);
+			 $.ajax({
+				type:"post",
+				dataType:"html",
+				url:"update",				
+				data:data,
+				success:function(res){
+					location.reload();		
+				}
+			}); 
+		});
+
+	  
+	  
+	  
   });
 
 
@@ -96,7 +144,8 @@
 			<td style="width: 300px">회원명 : ${dto.name}</td>	
 			<td rowspan="5" align="center" valign="bottom" style="width: 200px; vertical-align: middle;">	
 				
-				<button type="button" class="btn btn-outline-secondary">수정</button>
+				<button type="button" class="btn btn-outline-secondary btnupdate"
+				num=${dto.num } data-bs-target="#myUpdateModal" data-bs-toggle="modal">수정</button>
 				<br><br>
 				<button type="button" class="btn btn-outline-secondary btndelete" num=${dto.num }>삭제</button>
 							
@@ -118,5 +167,49 @@
 	</c:forEach>
 	
 </table></div>
+
+<!-- 수정모달 -->
+<!-- The Modal -->
+<div class="modal" id="myUpdateModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">회원정보수정</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="form-group">
+			   <label for="updatename">이름:</label>
+			   <input type="text" class="form-control" id="updatename">
+			</div>
+			<div class="form-group">
+			  <label for="updatehp">연락처:</label>
+			  <input type="text" class="form-control" id="updatehp">
+			</div>
+			<div class="form-group">
+			   <label for="updateemail">이메일:</label>
+			   <input type="text" class="form-control" id="updateemail">
+			</div>
+			<div class="form-group">
+			  <label for="updateaddr">주소:</label>
+			  <input type="text" class="form-control" id="updateaddr">
+			</div>
+
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal" id="btnupdateok">수정</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 </body>
 </html>

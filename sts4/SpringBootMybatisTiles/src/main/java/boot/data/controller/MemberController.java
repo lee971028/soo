@@ -164,5 +164,21 @@ public class MemberController {
 		
 	}
 	
-	
+	//수정폼에 출력할 dto반환
+	@GetMapping("/member/updateform")
+	@ResponseBody
+	public MemberDto getData(String num)
+	{
+		return service.getDataByNum(num);
+	}
+
+	//수정
+	@PostMapping("/member/update")
+	@ResponseBody
+	public void update(MemberDto dto)
+	{
+		service.updateMember(dto);
+		
+	}
+
 }
