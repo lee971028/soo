@@ -1,0 +1,32 @@
+server:
+  port: 9002
+
+spring:
+  thymeleaf:
+    prefix: classpath:templates/mycar/
+    suffix: .html
+    check-template-location: true
+    mode: HTML
+    cache: false #default true,개발시에는 false로 해두는것이 좋음
+#mysql setting
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://db-jbno2-kr.vpc-pub-cdb.ntruss.com:3306/studydb?serverTimezone=Asia/Seoul
+    username: study
+    password: bitcamp123!@#
+    
+#jpa setting
+#스키마 생성 create:기존테이블삭제후 생성, update:변경된 부분만 반영
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+#ddl 생성시 데이타베이스 고유의 기능을 사용할 것인가
+    generate-ddl: true
+    
+#api 호출시 실행되는 sql 문을 콘솔에 보여줄것인가
+    show-sql: true
+#사용할 데이타베이스 종류
+    database: mysql
+#Mysql 상세지정
+    database-platform: org.hibernate.dialect.MySQL57Dialect

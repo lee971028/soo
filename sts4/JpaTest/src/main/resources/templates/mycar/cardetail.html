@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Pen+Script&family=Permanent+Marker&family=Single+Day&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<style>
+   body * {
+       font-family: 'Jua';
+   }  
+</style>
+<script>
+	  $(function(){
+		 list(); 
+	  });
+	
+	  function list()
+	  {
+		  let num=[[${dto.num}]];
+		   $.ajax({
+				type:"get",
+				dataType:"json",
+				url:"./commentlist",
+				data:{"num":num},
+				success:function(res){
+					console.log(res);
+					let s=`댓글 &nbsp;${res.length}개`;
+					$.each(res,function(idx,item){
+						s+=
+						  `
+						  <div style="margin-left:20px;color:purple;">
+							  ${item.comment}							  
+						  </div>
+						  `;
+					});
+					
+					$(".comment-list").html(s);
+					
+			    }
+			});
+	  }	  
+</script>
+</head>
+<body>
+<h3>Detail Page([[${dto.carname}]])</h3>
+  <div th:object="${dto}">
+	  <img th:src=@{'https://kr.object.ncloudstorage.com/bitcamp-lmh/mycar/'+*{carphoto}}>
+ 
+      <h4>번호 : <span th:text="*{num}"></span></h4>
+      <h4>자동차명 : <span th:text="*{carname}"></span></h4>
+      <h4>단가 : <span th:text="*{carprice}"></span></h4>
+      <h4>구입일 : <span th:text="*{carguip}"></span></h4>
+      <div th:style="'background-color:'+*{carcolor}+';width:300px;font-size:2em'">색상 :
+          <span th:text="*{carcolor}"></span>
+      </div>
+  </div>
+  <hr> 
+  <!--<div th:object="${dto}">
+      <h4>번호 : [[*{num}]]</h4>
+      <h4>상품명 : [[*{carname}]]</h4>
+      <h4>가격 : [[*{carprice}]]</h4>
+      <h4>구입일 : [[*{carguip}]]</h4>
+      <div th:style="'background-color:'+*{carcolor}+';width:300px;font-size:2em'">색상 :
+          [[*{carcolor}]]
+      </div>
+  </div> -->
+  <button type="button" class="btn btn-danger"
+  th:onclick="|location.href='@{./delete(num=${dto.num})}'|">삭제</button>
+  <!--여기부터 추가 -->
+  <hr>
+   <div class="comment-list" style="margin-left:10px;">
+	  코맨트 목록
+  </div>
+  <h5>코맨트달기</h5>
+  <div class="input-group" style="width:400px;">
+	  <input type="text" class="form-control" id="comment">
+	  <button type="button" class="btn btn-success btn-sm" id="btncomment">저장</button>	  
+  </div>
+  <script>
+	  $("#btncomment").click(function(){
+		  let num=[[${dto.num}]];
+		  let comment=$("#comment").val();
+		  //console.log([[${dto.num}]]);
+		  
+		 $.ajax({
+				type:"get",
+				dataType:"text",
+				url:"./addcomment",
+				data:{"num":num,"comment":comment},
+				success:function(res){
+					list();//댓글추가후 전체 목록 출력
+					//댓글초기화
+					$("#comment").val("").focus();
+					
+			    }
+			});
+	  });
+	  
+  </script> 
+	  
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

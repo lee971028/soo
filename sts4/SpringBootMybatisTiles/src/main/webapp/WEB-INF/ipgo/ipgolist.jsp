@@ -14,7 +14,7 @@
 <body>
 <div class="alert alert-info" style="width: 600px; margin: 50px 100px;">
 <b>총${totalCount }개의 상품이 입고되었습니다</b>
-
+<b>깃 협업 테스트 중입니다</b>
 
 <table class="table table-bordered" >
   <caption align="top"><span style="float: right;">
