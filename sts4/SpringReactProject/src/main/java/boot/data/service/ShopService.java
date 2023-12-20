@@ -26,4 +26,16 @@ public class ShopService implements ShopServiceInter {
 		return shopMapper.getShopDatas();
 	}
 
+	@Override
+	public ShopDto getData(int num) {
+		// TODO Auto-generated method stub
+		return shopMapper.getData(num);
+	}
+
+	@Override
+	public void deleteShop(int num) {
+		// TODO Auto-generated method stub
+		shopMapper.deleteShop(num);
+	}
+
 }

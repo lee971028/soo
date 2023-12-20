@@ -20,7 +20,7 @@ function RouteMain(props) {
                     {/* shop */}
                     <Route path='/shop/list' element={<Shop/>}/>
                     <Route path='/shop/form' element={<ShopForm/>}/>
-                    <Route path='/shop/deatail/:num' element={<ShopDetail/>}/>
+                    <Route path='/shop/detail/:num' element={<ShopDetail/>}/>
 
 
 
