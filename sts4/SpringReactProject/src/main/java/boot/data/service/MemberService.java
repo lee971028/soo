@@ -2,7 +2,9 @@ package boot.data.service;
 
 
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -43,8 +45,16 @@ public class MemberService implements MemberServiceInter {
 	@Override
 	public int loginPassCheck(String id, String pass) {
 		// TODO Auto-generated method stub
-		
-		return 0;
+		Map<String, String> map=new HashMap<>();
+		map.put("id", id);
+		map.put("pass", pass);
+		return memMapper.loginPassCheck(map);
+	}
+
+	@Override
+	public void deleteMember(int num) {
+		// TODO Auto-generated method stub
+		memMapper.deleteMember(num);
 	}
 
 	

@@ -55,7 +55,7 @@ function ShopForm(props) {
                 <tbody>
                     <tr>
                         <th>상품명</th>
-                        <td>
+                        <td >
                             <input type='text' className='form-control'
                             style={{width:'250px'}} onChange={(e)=>{
                                 setSangpum(e.target.value);

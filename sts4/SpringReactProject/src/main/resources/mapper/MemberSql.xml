@@ -18,4 +18,7 @@
   	<select id="loginPassCheck" parameterType="Map" resultType="int">
   	   select count(*) from member where id=#{id} and pass=#{pass}
   	</select>
+  	<delete id="deleteMember" parameterType="int">
+  	   delete from member where num=#{num}
+  	</delete>
   </mapper>
